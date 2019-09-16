@@ -1,0 +1,36 @@
+server:
+  port: 6001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+  instance:
+    #    ��ʾip
+    prefer-ip-address: true
+    #    Status��ʾ��
+    instance-id: eureka-provider-6001
+    #��Ҫ�����������ã�����ע�����ķ���·���仯
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+spring:
+  application:
+    #    Application����
+    name: EUREKA-PROVIDER
+
+management:
+  server:
+  #actuator�˿�
+  #    port: 9001
+  endpoints:
+    web:
+      #�޸ķ���·��  2.0֮ǰĬ����/   2.0Ĭ���� /actuator  ����ͨ���������ֵ�޸�
+      base-path: /actuator
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      #��ʾ����������Ϣ  Ĭ�ϲ�����ʾ��ϸ��Ϣ
+      show-details: always
+info:
+  appName: eureka-provider-6001
+  companyName: www.wanho.net
