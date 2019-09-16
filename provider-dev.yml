@@ -19,8 +19,7 @@ spring:
 
 management:
   server:
-  #actuator�˿�
-  #    port: 9001
+     port: 9001
   endpoints:
     web:
       #�޸ķ���·��  2.0֮ǰĬ����/   2.0Ĭ���� /actuator  ����ͨ���������ֵ�޸�
